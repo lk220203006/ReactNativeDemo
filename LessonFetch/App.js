@@ -1,13 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+
+//在ReactNative中，使用fetch实现网络请求
+
+//练习1：使用get和post方式获取数据
+var GetData = require('./getData');
+var MovieList = require('./movieList');
+
+//练习2：电影列表（网络请求数据）
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        {/* <GetData></GetData> */}
+        <MovieList></MovieList>
       </View>
     );
   }
@@ -17,7 +24,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
